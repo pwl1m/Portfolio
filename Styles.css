@@ -1,0 +1,309 @@
+  html,body{
+  margin:0px;
+  padding: 0px;
+  
+}
+/* PRIMEIRA PAGINA */
+body{
+  background-color: #414141 ;
+  color:#000000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navigation{
+  background-color: #37718e ;
+  height: 50px ;
+  background: linear-gradient(90deg,#72dbe9,#6d3b9b);
+  animation-duration: 1.5s;
+  animation-name: nav;
+}
+
+.navigation ul{
+  margin-top: 0px;
+  list-style: none; /* tirar as bolinhas do 'ul' */
+  padding-left: 0px;
+  text-align: center; 
+  height: 50px;
+}
+
+.navigation a{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navigation a:hover{
+  color:#000000
+}
+
+.navigation li{
+  display: inline-block; /* criar os blocos */
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+}
+
+.navigation li.threeline-icon{
+  display: none;
+}
+
+.navigation li.threeline-icon:hover {
+  color: #f27609;
+  cursor: pointer;
+}
+
+.capa div{
+  display: inline-block; /* criar blocos */
+  height: 650px;
+}
+
+.profile-pic{
+/*background-color: yellow;*/
+width: 40%; /* Opção para caso use cores diferentes para cada bloco e transformar o site responsivo a sempre trabalhar com essa proporção*/
+text-align: center;
+animation-name: profile-capa;
+animation-duration: 1.5s;
+vertical-align: top;
+}
+
+.profile-pic img{
+  width: 350px;
+  border-radius: 90px;
+  margin-top: 100px;
+  animation-name: profile-capa;
+  animation-duration: 1.5s;
+}
+
+.profile-title{
+  /*background-color: red;*/
+  vertical-align: top;
+  width: 59%; /* Opção para caso use cores diferentes para cada bloco e transformar o site responsivo a sempre trabalhar com essa proporção*/
+  animation-name: title-capa;
+  animation-duration: 1.5s;
+}
+
+.profile-title h1{
+line-height: 30px; /* diminuir espacamento */
+font-size: 50px;
+text-shadow: cyan -2px 0, red 2px 0;
+margin-top: 220px;
+color:#ffffff
+}
+
+.profile-title h2{
+  font-size: 20px;
+}
+
+/* PORTFOLIO */
+#f1{
+  float: right;
+}
+
+.main {
+  padding-top: 0px;
+  padding-right: 100px;
+  padding-bottom: 80px;
+  padding-left: 100px;
+animation-name: tela;
+animation-duration: 1s;
+}
+
+.main img{
+float: right;
+width: 250px;
+margin-right: 20px;
+}
+
+.main h1{
+   color: #ffffff;
+   font-weight: normal;
+  }
+
+.main h2{
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-top: 50px;
+  }
+
+.main h3{
+  color: #FA9F42;
+  font-size: 12px;
+  text-transform: uppercase;
+  }
+
+.main p{
+  color:#ffffff;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 28px;
+  text-align: justify;
+}
+
+.inf{
+margin-top: 30px;
+font-size: 20px;
+margin-left: 50px;
+color: #ffffff;
+}
+
+#inf{
+  font-size: 20px;
+  line-height: 12px;
+}
+
+#social-img {
+  width: 50px;
+}
+
+/*PORTFOLIO*/
+
+.miniatura{
+  width: 320px;
+  height: 320px;
+  /*background-image: url("../img/ccb.jpg"); ../ faz ele voltar uma pasta pois o css esta em outra pasta*/
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  background-size: contain; /*pra fazer a imagem caber no tamanho do CSS*/
+  overflow: hidden;
+}
+
+.blackbox{
+width: 100%;
+height: 100%;
+background-color: #000000;
+opacity: 0;
+padding-top: 120px;
+}
+
+.miniatura a{
+  text-decoration: none; /*tirar sublinhado de links*/
+}
+
+.blackbox:hover{
+  opacity: 0.75
+}
+
+.blackbox-title{
+  text-align: center;
+}
+
+.blackbox h1{
+font-size: 1rem;
+color:#FA9F42;
+text-transform: uppercase; /*letras maiusculas*/
+margin-top: 0;
+}
+
+.blackbox h2{
+  text-transform: none;
+  margin-top: 0;
+}
+/*Divs dos Trabalhos*/
+.maint {
+  padding-top: 0px;
+  padding-right: 100px;
+  padding-bottom: 80px;
+  padding-left: 100px;
+}
+
+.maint img{
+width: 100%;
+margin-bottom: 1rem ;
+margin-top: 2rem ;
+}
+
+@keyframes profile-capa {
+  0%  {opacity: 0; transform: translate(0px,20px)}
+  100% {opacity: 1; transform: translate(0px,0px)}
+}
+
+@keyframes title-capa {
+  0%  {opacity: 0; transform: translate(0px,-20px)}
+  100% {opacity: 1; transform: translate(0px,0px)}
+}
+
+@keyframes nav {
+  0%  {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes tela{
+  0%  {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@media (max-width:1200px){
+
+.navigation li{
+  display: none;
+}
+
+.navigation li.threeline-icon{
+  display: inline-block;  
+  text-align: right;
+}
+
+.capa div{
+  display: block; /* criar blocos */
+  height: auto;
+}
+
+.profile-pic{
+width: 100%;
+}
+
+.profile-pic img{
+  margin-top: 0;
+  max-width: 80%;
+}
+
+.profile-title{
+width: 100%;
+text-align: center;
+}
+
+.profile-title h1{
+margin-top: 20px;
+font-size: 40px;
+}
+
+.main {
+  padding-top: 5px;
+  padding-right: 5%;
+  padding-bottom: 40px;
+  padding-left: 5%;
+}
+
+.main a{
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.miniatura{
+max-width: 100%;
+background-size: auto 100%;
+
+}
+
+.blackbox{
+  opacity: 0.5%;
+}
+
+.menujs{
+height: auto;
+}
+
+.menujs ul{
+height: auto;
+text-align: center;
+}
+
+.menujs li{
+  display:block;
+}
+
+}
